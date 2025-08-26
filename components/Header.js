@@ -4,13 +4,13 @@ import styles from "../app/styles";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function Header() {
+export default function Header({ isLoggedIn }) {
   return (
     <SafeAreaView style={styles.headerView}>
       {/* Left side */}
       <View style={styles.leftSection}>
         <Image
-          source={require("../assets/images/iconServe.png")}
+          source={ require("../assets/images/iconServe.png") }
           style={styles.logoHeader}
           resizeMode="contain"
         />
@@ -20,10 +20,10 @@ export default function Header() {
         </View>
       </View>
 
-      {/* Right side stacked */}
+      {/* Right side */}
       <View style={styles.rightSection}>
         <View style={styles.loggedInStateView}>
-          <Text style={styles.loggedInState}>Not Logged In</Text>
+          <Text style={styles.loggedInState}>{isLoggedIn ? "Logged In" : "Not Logged In"}</Text>
         </View>
 
         <LinearGradient

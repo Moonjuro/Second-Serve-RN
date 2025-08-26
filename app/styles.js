@@ -4,7 +4,6 @@ const ANDROID_STATUSBAR = Platform.OS === "android" ? StatusBar.currentHeight ||
 
 const styles = StyleSheet.create({
   headerView: {
-    paddingTop: ANDROID_STATUSBAR,
     backgroundColor: "#ffffff",
     flexDirection: "row",
     alignItems: "center",
@@ -30,18 +29,11 @@ const styles = StyleSheet.create({
   },
 
   logoHeader: {
-    width: 56,
-    height: 56,
+    width: 80,
+    height: 80,
     borderRadius: 8,
     marginRight: 12,
     resizeMode: "contain",
-  },
-
-  headerTitle: {
-    color: "#2a8a2a",
-    fontSize: 20,
-    fontWeight: "800",
-    lineHeight: 22,
   },
 
   rightSection: {
@@ -85,23 +77,25 @@ const styles = StyleSheet.create({
     textAlign: "center",
     lineHeight: 18,
   },
+
   titleWrapper: {
     flexDirection: "column",
     justifyContent: "center",
   },
+
   titleLine1: {
     color: "#2a8a2a",
-    fontSize: 20,
+    fontSize: 30,
     fontWeight: "800",
     lineHeight: 22,
   },
 
   titleLine2: {
     color: "#2a8a2a",
-    fontSize: 22,
+    fontSize: 28,
     fontWeight: "800",
-    lineHeight: 24,
-    marginTop: -2, // small overlap for compact look
+    lineHeight: 35,
+    marginTop: 2, // small overlap for compact look
   },
 
   rightSection: {
